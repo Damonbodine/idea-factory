@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import DesignPreview from '@/components/DesignPreview'
 
 const designs = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
@@ -53,6 +54,9 @@ export default function Home() {
           <p className="text-sm text-gray-500 mt-2">
             50 unique designs combining bold, startup, and creative aesthetics
           </p>
+          <p className="text-xs text-gray-400 mt-1">
+            Live previews of actual designs
+          </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
@@ -64,39 +68,30 @@ export default function Home() {
               onMouseEnter={() => setHoveredId(design.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                <div className={`absolute inset-0 bg-gradient-to-br ${design.gradient} opacity-90`} />
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white border border-gray-100">
+                {/* Live Preview - Always visible */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <DesignPreview id={design.id} />
+                </div>
 
-                <div className="absolute inset-0 bg-white m-2 rounded-lg">
-                  <div className="p-3">
-                    <div className={`h-2 w-16 bg-gradient-to-r ${design.gradient} rounded mb-2`} />
-                    <div className="space-y-1">
-                      <div className="h-1 bg-gray-200 rounded w-full" />
-                      <div className="h-1 bg-gray-200 rounded w-3/4" />
-                    </div>
-                  </div>
-
-                  <div className={`mx-3 h-20 bg-gradient-to-br ${design.gradient} rounded-lg opacity-20`} />
-
-                  <div className="p-3 space-y-2">
-                    <div className="grid grid-cols-3 gap-1">
-                      {[...Array(3)].map((_, i) => (
-                        <div key={i} className="h-8 bg-gray-100 rounded" />
-                      ))}
-                    </div>
-                    <div className="h-1 bg-gray-200 rounded w-full" />
-                    <div className="h-1 bg-gray-200 rounded w-2/3" />
+                {/* Hover Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end p-3 transition-opacity ${
+                  hoveredId === design.id ? 'opacity-100' : 'opacity-0'
+                } pointer-events-none`}>
+                  <div className="text-white">
+                    <p className="font-bold text-sm md:text-base">{design.name}</p>
+                    <p className="text-xs opacity-90">{design.style} Style</p>
                   </div>
                 </div>
 
-                {hoveredId === design.id && (
-                  <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center transition-opacity">
-                    <div className="text-white text-center">
-                      <p className="font-bold text-lg">{design.name}</p>
-                      <p className="text-sm opacity-90">{design.style}</p>
-                    </div>
-                  </div>
-                )}
+                {/* Bottom gradient for readability */}
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/90 to-transparent pointer-events-none" />
+
+                {/* Card Label */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur px-2 py-1">
+                  <p className="text-xs font-medium text-gray-700">{design.name}</p>
+                  <p className="text-[10px] text-gray-500">{design.style}</p>
+                </div>
               </div>
             </Link>
           ))}
