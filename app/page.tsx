@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import DesignPreview from '@/components/DesignPreview'
 
-const designs = Array.from({ length: 50 }, (_, i) => ({
+const designs = Array.from({ length: 100 }, (_, i) => ({
   id: i + 1,
   name: `Design ${i + 1}`,
   style: getDesignStyle(i),
@@ -52,7 +52,7 @@ export default function Home() {
             Select a design to preview the full homepage layout
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            50 unique designs combining bold, startup, and creative aesthetics
+            100 unique designs combining bold, startup, and creative aesthetics
           </p>
           <p className="text-xs text-gray-400 mt-1">
             Live previews of actual designs

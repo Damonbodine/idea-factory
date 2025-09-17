@@ -48,6 +48,56 @@ import Design47 from './Design47'
 import Design48 from './Design48'
 import Design49 from './Design49'
 import Design50 from './Design50'
+import Design51 from './Design51'
+import Design52 from './Design52'
+import Design53 from './Design53'
+import Design54 from './Design54'
+import Design55 from './Design55'
+import Design56 from './Design56'
+import Design57 from './Design57'
+import Design58 from './Design58'
+import Design59 from './Design59'
+import Design60 from './Design60'
+import Design61 from './Design61'
+import Design62 from './Design62'
+import Design63 from './Design63'
+import Design64 from './Design64'
+import Design65 from './Design65'
+import Design66 from './Design66'
+import Design67 from './Design67'
+import Design68 from './Design68'
+import Design69 from './Design69'
+import Design70 from './Design70'
+import Design71 from './Design71'
+import Design72 from './Design72'
+import Design73 from './Design73'
+import Design74 from './Design74'
+import Design75 from './Design75'
+import Design76 from './Design76'
+import Design77 from './Design77'
+import Design78 from './Design78'
+import Design79 from './Design79'
+import Design80 from './Design80'
+import Design81 from './Design81'
+import Design82 from './Design82'
+import Design83 from './Design83'
+import Design84 from './Design84'
+import Design85 from './Design85'
+import Design86 from './Design86'
+import Design87 from './Design87'
+import Design88 from './Design88'
+import Design89 from './Design89'
+import Design90 from './Design90'
+import Design91 from './Design91'
+import Design92 from './Design92'
+import Design93 from './Design93'
+import Design94 from './Design94'
+import Design95 from './Design95'
+import Design96 from './Design96'
+import Design97 from './Design97'
+import Design98 from './Design98'
+import Design99 from './Design99'
+import Design100 from './Design100'
 
 export const designs = [
   Design1,
@@ -100,6 +150,56 @@ export const designs = [
   Design48,
   Design49,
   Design50,
+  Design51,
+  Design52,
+  Design53,
+  Design54,
+  Design55,
+  Design56,
+  Design57,
+  Design58,
+  Design59,
+  Design60,
+  Design61,
+  Design62,
+  Design63,
+  Design64,
+  Design65,
+  Design66,
+  Design67,
+  Design68,
+  Design69,
+  Design70,
+  Design71,
+  Design72,
+  Design73,
+  Design74,
+  Design75,
+  Design76,
+  Design77,
+  Design78,
+  Design79,
+  Design80,
+  Design81,
+  Design82,
+  Design83,
+  Design84,
+  Design85,
+  Design86,
+  Design87,
+  Design88,
+  Design89,
+  Design90,
+  Design91,
+  Design92,
+  Design93,
+  Design94,
+  Design95,
+  Design96,
+  Design97,
+  Design98,
+  Design99,
+  Design100,
 ]
 
 export function getDesign(id: number) {
