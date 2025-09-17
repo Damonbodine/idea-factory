@@ -8,23 +8,26 @@ export default function Design15() {
           transform-style: preserve-3d;
         }
       `}</style>
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12">ISO15</h1>
-        <div className="flex justify-center items-center h-96">
-          <div className="isometric">
-            <div className="grid grid-cols-3 gap-4">
-              {[...Array(9)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600"
-                  style={{
-                    transform: `translateZ(${Math.random() * 100}px)`
-                  }}
-                />
-              ))}
-            </div>
+      <header className="text-center mb-12">
+        <h1 className="text-5xl font-bold text-purple-900">ISO/METRIC</h1>
+      </header>
+      <div className="flex justify-center items-center min-h-[60vh]">
+        <div className="isometric">
+          <div className="grid grid-cols-3 gap-8">
+            {[...Array(9)].map((_, i) => (
+              <div
+                key={i}
+                className="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 shadow-xl"
+                style={{
+                  transform: `translateZ(${i * 20}px)`
+                }}
+              />
+            ))}
           </div>
         </div>
+      </div>
+      <div className="text-center mt-12">
+        <p className="text-purple-700">3D Design Solutions</p>
       </div>
     </div>
   )

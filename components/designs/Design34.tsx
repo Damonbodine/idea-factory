@@ -1,36 +1,32 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Layers, Box, Grid3x3 } from 'lucide-react'
-
 export default function Design34() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">CardFlow34</h1>
-      </header>
-      <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          { icon: Layers, title: 'Stack', color: 'bg-purple-500' },
-          { icon: Box, title: 'Build', color: 'bg-blue-500' },
-          { icon: Grid3x3, title: 'Scale', color: 'bg-green-500' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition"
-          >
-            <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4`}>
-              <item.icon className="w-8 h-8 text-white" />
+    <div className="min-h-screen bg-black text-white font-mono">
+      <div className="container mx-auto px-8 py-16">
+        <header className="text-center mb-20">
+          <div className="inline-block">
+            <div className="text-6xl mb-4 text-yellow-400" style={{textShadow: '4px 4px 0px #ff00ff'}}>
+              ARCADE
             </div>
-            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">
-              Professional solutions for modern challenges
-            </p>
-          </motion.div>
-        ))}
-      </main>
+            <div className="text-xl text-cyan-400">INSERT COIN TO CONTINUE</div>
+          </div>
+        </header>
+        <main className="max-w-4xl mx-auto">
+          <div className="border-4 border-yellow-400 p-8">
+            <div className="text-center mb-8">
+              <div className="text-3xl mb-4">HIGH SCORE</div>
+              <div className="text-5xl text-yellow-400">999999</div>
+            </div>
+            <div className="grid grid-cols-2 gap-8">
+              <button className="bg-red-600 p-4 text-2xl">PLAYER 1</button>
+              <button className="bg-blue-600 p-4 text-2xl">PLAYER 2</button>
+            </div>
+          </div>
+          <div className="text-center mt-8 animate-pulse">
+            <div className="text-cyan-400">PRESS START</div>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

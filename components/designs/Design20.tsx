@@ -1,30 +1,37 @@
 'use client'
 export default function Design20() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 to-purple-100 p-8">
-      <style jsx>{`
-        .isometric {
-          transform: rotateX(60deg) rotateZ(-45deg);
-          transform-style: preserve-3d;
-        }
-      `}</style>
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12">ISO20</h1>
-        <div className="flex justify-center items-center h-96">
-          <div className="isometric">
-            <div className="grid grid-cols-3 gap-4">
-              {[...Array(9)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600"
-                  style={{
-                    transform: `translateZ(${Math.random() * 100}px)`
-                  }}
-                />
-              ))}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-8 py-16">
+        <nav className="flex justify-between items-center mb-20">
+          <div className="text-sm tracking-[0.2em]">MINIMAL.DARK</div>
+          <div className="flex gap-8 text-sm">
+            <a href="#" className="hover:text-gray-400">Work</a>
+            <a href="#" className="hover:text-gray-400">Studio</a>
+            <a href="#" className="hover:text-gray-400">Contact</a>
+          </div>
+        </nav>
+        <main>
+          <h1 className="text-7xl font-thin mb-12">
+            Less is<br />
+            <span className="font-bold italic">everything</span>
+          </h1>
+          <div className="w-20 h-px bg-white mb-12" />
+          <div className="grid grid-cols-3 gap-8">
+            <div>
+              <div className="text-4xl font-thin mb-4">01</div>
+              <p className="text-gray-400">Strategy</p>
+            </div>
+            <div>
+              <div className="text-4xl font-thin mb-4">02</div>
+              <p className="text-gray-400">Design</p>
+            </div>
+            <div>
+              <div className="text-4xl font-thin mb-4">03</div>
+              <p className="text-gray-400">Develop</p>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   )

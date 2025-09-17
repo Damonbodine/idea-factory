@@ -1,25 +1,37 @@
 'use client'
 export default function Design42() {
-  const items = [
-    { h: 'h-32', color: 'bg-red-400' },
-    { h: 'h-48', color: 'bg-blue-400' },
-    { h: 'h-40', color: 'bg-green-400' },
-    { h: 'h-64', color: 'bg-yellow-400' },
-    { h: 'h-32', color: 'bg-purple-400' },
-    { h: 'h-56', color: 'bg-pink-400' }
-  ]
-
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <header className="text-center mb-12">
-        <h1 className="text-5xl font-bold">MASONRY42</h1>
-      </header>
-      <div className="columns-1 md:columns-3 gap-4 max-w-6xl mx-auto">
-        {items.map((item, i) => (
-          <div key={i} className={`${item.color} ${item.h} mb-4 rounded-lg p-4 break-inside-avoid`}>
-            <div className="text-white font-bold">Block {i + 1}</div>
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-8 py-16">
+        <header className="mb-20">
+          <div className="inline-block">
+            <h1 className="text-8xl font-black text-transparent"
+                style={{
+                  WebkitTextStroke: '3px #ff00ff',
+                  textShadow: '5px 5px 0 #00ffff'
+                }}>
+              STREET
+            </h1>
+            <div className="text-3xl text-yellow-400 -mt-4">DESIGN 42</div>
           </div>
-        ))}
+        </header>
+        <main>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-8 transform rotate-2">
+              <h2 className="text-4xl font-bold text-white mb-4">URBAN</h2>
+              <p className="text-white">Raw creativity unleashed</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-600 to-blue-600 p-8 transform -rotate-2">
+              <h2 className="text-4xl font-bold text-white mb-4">REBEL</h2>
+              <p className="text-white">Breaking all the rules</p>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-red-600 text-white px-8 py-4 text-2xl font-bold transform skew-x-12">
+              TAG YOUR STYLE
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   )

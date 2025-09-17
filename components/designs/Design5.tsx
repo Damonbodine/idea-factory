@@ -1,6 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
-
 export default function Design5() {
   return (
     <div className="min-h-screen bg-white">

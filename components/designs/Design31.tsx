@@ -1,19 +1,28 @@
 'use client'
 export default function Design31() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="fixed top-8 left-8 z-50">
-        <h1 className="text-2xl font-bold">H-SCROLL31</h1>
-      </div>
-      <div className="flex items-center h-screen">
-        <div className="flex gap-8 px-8" style={{ width: 'max-content' }}>
-          {['Project A', 'Project B', 'Project C', 'Project D'].map((project, i) => (
-            <div key={i} className="w-96 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8">
-              <h2 className="text-3xl font-bold mb-4">{project}</h2>
-              <p>Innovative digital solutions</p>
-            </div>
-          ))}
-        </div>
+    <div className="min-h-screen bg-gray-950 text-white">
+      <div className="grid grid-cols-12 h-screen">
+        <aside className="col-span-2 bg-gray-900 p-4">
+          <div className="text-xl font-bold mb-8">DASH/31</div>
+          <nav className="space-y-2">
+            {['Overview', 'Analytics', 'Reports', 'Settings'].map(item => (
+              <div key={item} className="px-4 py-2 bg-gray-800 rounded">{item}</div>
+            ))}
+          </nav>
+        </aside>
+        <main className="col-span-10 p-8">
+          <h1 className="text-3xl mb-8">Data Control Center</h1>
+          <div className="grid grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map(i => (
+              <div key={i} className="bg-gray-900 p-6 rounded-lg">
+                <div className="text-sm text-gray-400 mb-2">METRIC {i}</div>
+                <div className="text-3xl font-bold mb-4">{(i * 1234).toLocaleString()}</div>
+                <div className="h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded"></div>
+              </div>
+            ))}
+          </div>
+        </main>
       </div>
     </div>
   )

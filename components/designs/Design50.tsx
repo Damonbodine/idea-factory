@@ -1,30 +1,35 @@
 'use client'
 export default function Design50() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 to-purple-100 p-8">
-      <style jsx>{`
-        .isometric {
-          transform: rotateX(60deg) rotateZ(-45deg);
-          transform-style: preserve-3d;
-        }
-      `}</style>
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12">ISO50</h1>
-        <div className="flex justify-center items-center h-96">
-          <div className="isometric">
-            <div className="grid grid-cols-3 gap-4">
-              {[...Array(9)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600"
-                  style={{
-                    transform: `translateZ(${Math.random() * 100}px)`
-                  }}
-                />
-              ))}
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400">
+      <div className="container mx-auto px-8 py-16">
+        <header className="text-center mb-20">
+          <div className="text-white">
+            <div className="text-2xl mb-4">🎉 FINALE 🎉</div>
+            <h1 className="text-8xl font-bold mb-4">50</h1>
+            <div className="text-3xl">Design Complete!</div>
+          </div>
+        </header>
+        <main>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/20 backdrop-blur-lg p-12 rounded-3xl text-white text-center">
+              <h2 className="text-4xl font-bold mb-6">Mission Accomplished</h2>
+              <p className="text-xl mb-8">
+                50 unique designs, infinite possibilities
+              </p>
+              <div className="grid grid-cols-5 gap-2 mb-8">
+                {Array.from({length: 50}).map((_, i) => (
+                  <div key={i} className="w-full h-12 bg-white/30 rounded flex items-center justify-center text-sm font-bold">
+                    {i + 1}
+                  </div>
+                ))}
+              </div>
+              <button className="bg-white text-purple-600 px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transition-transform">
+                CHOOSE YOUR FAVORITE
+              </button>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     </div>
   )

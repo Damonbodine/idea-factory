@@ -1,31 +1,51 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Mouse } from 'lucide-react'
-
 export default function Design43() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-white">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur z-50 px-8 py-4">
-        <div className="flex justify-between items-center">
-          <div className="font-bold">Parallax43</div>
-          <button className="px-4 py-2 bg-sky-500 text-white rounded">Menu</button>
-        </div>
-      </nav>
-      <main className="pt-20">
-        <div className="h-screen flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center"
-          >
-            <h1 className="text-8xl font-bold mb-8">SCROLL</h1>
-            <Mouse className="w-8 h-8 mx-auto animate-bounce" />
-          </motion.div>
-        </div>
-        <div className="h-screen bg-sky-200 flex items-center justify-center">
-          <h2 className="text-6xl">Section Two</h2>
-        </div>
-      </main>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-8 py-16">
+        <header className="mb-20">
+          <div className="flex items-center gap-4">
+            <div className="text-5xl font-light">Δ</div>
+            <div>
+              <div className="text-3xl">Scientific Design</div>
+              <div className="text-sm text-gray-600">Hypothesis 43</div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div className="bg-white p-8 shadow-lg">
+            <h1 className="text-4xl mb-6">Research & Development</h1>
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-xl font-bold mb-4">Methodology</h2>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-blue-600"></div>
+                    <span>Data Collection</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-green-600"></div>
+                    <span>Analysis</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-purple-600"></div>
+                    <span>Conclusion</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Results</h2>
+                <div className="h-40 bg-gradient-to-r from-blue-100 to-purple-100 rounded"></div>
+              </div>
+            </div>
+            <div className="mt-8 pt-8 border-t">
+              <p className="text-sm text-gray-600">
+                E = mc² • The intersection of science and design
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

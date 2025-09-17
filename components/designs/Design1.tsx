@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Play, Volume2, ArrowRight } from 'lucide-react'
+import { Play, Volume2 } from 'lucide-react'
 
 export default function Design1() {
   return (

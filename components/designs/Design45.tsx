@@ -1,29 +1,36 @@
 'use client'
 export default function Design45() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 to-purple-100 p-8">
-      <style jsx>{`
-        .isometric {
-          transform: rotateX(60deg) rotateZ(-45deg);
-          transform-style: preserve-3d;
-        }
-      `}</style>
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12">ISO45</h1>
-        <div className="flex justify-center items-center h-96">
-          <div className="isometric">
-            <div className="grid grid-cols-3 gap-4">
-              {[...Array(9)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600"
-                  style={{
-                    transform: `translateZ(${Math.random() * 100}px)`
-                  }}
-                />
-              ))}
+    <div className="min-h-screen bg-amber-50">
+      <div className="container mx-auto px-8 py-16">
+        <div className="bg-amber-100 border-8 border-amber-900 p-12">
+          <header className="text-center mb-12">
+            <div className="text-amber-900">
+              <div className="text-2xl">★ VINTAGE ★</div>
+              <h1 className="text-7xl font-bold my-4">POSTER</h1>
+              <div className="text-2xl">DESIGN CO.</div>
             </div>
-          </div>
+          </header>
+          <main>
+            <div className="text-center mb-12">
+              <div className="inline-block bg-red-800 text-amber-100 px-8 py-4 text-3xl font-bold">
+                EST. 1945
+              </div>
+            </div>
+            <div className="border-4 border-amber-900 p-8">
+              <p className="text-center text-xl text-amber-900">
+                "Timeless designs for the modern age"
+              </p>
+            </div>
+            <div className="flex justify-center gap-8 mt-12">
+              <div className="text-amber-900">✦</div>
+              <div className="text-amber-900">✦</div>
+              <div className="text-amber-900">✦</div>
+            </div>
+          </main>
+          <footer className="text-center mt-12">
+            <div className="text-sm text-amber-700">EDITION No. 45</div>
+          </footer>
         </div>
       </div>
     </div>

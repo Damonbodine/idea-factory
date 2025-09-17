@@ -1,31 +1,33 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Mouse } from 'lucide-react'
-
 export default function Design28() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-white">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur z-50 px-8 py-4">
-        <div className="flex justify-between items-center">
-          <div className="font-bold">Parallax28</div>
-          <button className="px-4 py-2 bg-sky-500 text-white rounded">Menu</button>
+    <div className="min-h-screen bg-black text-green-400 font-mono">
+      <div className="p-8">
+        <div className="mb-8">
+          <span className="text-green-600">user@design28:~$</span> ls -la
         </div>
-      </nav>
-      <main className="pt-20">
-        <div className="h-screen flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center"
-          >
-            <h1 className="text-8xl font-bold mb-8">SCROLL</h1>
-            <Mouse className="w-8 h-8 mx-auto animate-bounce" />
-          </motion.div>
+        <div className="mb-8">
+          <div className="text-green-300">drwxr-xr-x  5 user user 4096 Sep 17 12:00 .</div>
+          <div className="text-green-300">drwxr-xr-x  3 user user 4096 Sep 17 11:00 ..</div>
+          <div className="text-green-300">-rw-r--r--  1 user user  256 Sep 17 12:00 index.html</div>
         </div>
-        <div className="h-screen bg-sky-200 flex items-center justify-center">
-          <h2 className="text-6xl">Section Two</h2>
+        <div className="mb-8">
+          <span className="text-green-600">user@design28:~$</span> cat welcome.txt
         </div>
-      </main>
+        <div className="max-w-2xl">
+          <h1 className="text-4xl mb-4 text-green-400">TERMINAL_DESIGN</h1>
+          <p className="mb-8">Welcome to the command line interface of web design.</p>
+          <div className="border border-green-400 p-4">
+            <div>&gt; Executing creative.sh...</div>
+            <div>&gt; Loading innovation modules...</div>
+            <div>&gt; Design process initialized.</div>
+          </div>
+        </div>
+        <div className="mt-8">
+          <span className="text-green-600 animate-pulse">user@design28:~$</span>
+          <span className="animate-pulse"> _</span>
+        </div>
+      </div>
     </div>
   )
 }

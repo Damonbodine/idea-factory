@@ -1,36 +1,36 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Layers, Box, Grid3x3 } from 'lucide-react'
-
 export default function Design44() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">CardFlow44</h1>
-      </header>
-      <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          { icon: Layers, title: 'Stack', color: 'bg-purple-500' },
-          { icon: Box, title: 'Build', color: 'bg-blue-500' },
-          { icon: Grid3x3, title: 'Scale', color: 'bg-green-500' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition"
-          >
-            <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4`}>
-              <item.icon className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">
-              Professional solutions for modern challenges
-            </p>
-          </motion.div>
-        ))}
-      </main>
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-8 py-16">
+        <header className="border-b border-gray-200 pb-8 mb-12">
+          <div className="flex justify-between items-center">
+            <div className="text-3xl font-light">Gallery 44</div>
+            <nav className="flex gap-8 text-sm uppercase tracking-wider">
+              <a href="#">Exhibitions</a>
+              <a href="#">Artists</a>
+              <a href="#">Collection</a>
+              <a href="#">Visit</a>
+            </nav>
+          </div>
+        </header>
+        <main>
+          <div className="text-center mb-16">
+            <h1 className="text-6xl font-light mb-4">Contemporary Vision</h1>
+            <p className="text-xl text-gray-600">Curated Digital Experiences</p>
+          </div>
+          <div className="grid grid-cols-4 gap-4">
+            {Array.from({length: 8}).map((_, i) => (
+              <div key={i} className={`${i === 0 || i === 5 ? 'col-span-2 row-span-2' : ''} bg-gray-100 aspect-square`}></div>
+            ))}
+          </div>
+          <div className="text-center mt-16">
+            <button className="border-2 border-black px-8 py-3 uppercase tracking-wider">
+              View Exhibition
+            </button>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

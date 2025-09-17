@@ -1,6 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
-
 export default function Design2() {
   return (
     <div className="min-h-screen bg-gray-50">

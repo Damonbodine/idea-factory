@@ -1,36 +1,42 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Layers, Box, Grid3x3 } from 'lucide-react'
-
 export default function Design49() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">CardFlow49</h1>
-      </header>
-      <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          { icon: Layers, title: 'Stack', color: 'bg-purple-500' },
-          { icon: Box, title: 'Build', color: 'bg-blue-500' },
-          { icon: Grid3x3, title: 'Scale', color: 'bg-green-500' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition"
-          >
-            <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4`}>
-              <item.icon className="w-8 h-8 text-white" />
+    <div className="min-h-screen bg-gray-200">
+      <div className="container mx-auto px-8 py-16">
+        <header className="mb-20">
+          <div className="bg-yellow-500 text-black p-2 inline-block">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl font-black">⚙</div>
+              <div>
+                <div className="text-2xl font-black">INDUSTRIAL</div>
+                <div className="text-xs">DESIGN UNIT 49</div>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">
-              Professional solutions for modern challenges
+          </div>
+        </header>
+        <main>
+          <div className="bg-gray-800 text-white p-12">
+            <h1 className="text-5xl font-black mb-8">HEAVY DUTY<br />INTERFACES</h1>
+            <div className="grid grid-cols-4 gap-4 mb-8">
+              {['STEEL', 'CONCRETE', 'POWER', 'BUILD'].map(word => (
+                <div key={word} className="bg-yellow-500 text-black p-4 text-center font-black">
+                  {word}
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-300">
+              Robust solutions for demanding environments. Built to last.
             </p>
-          </motion.div>
-        ))}
-      </main>
+          </div>
+          <div className="bg-yellow-500 h-8 flex items-center px-4">
+            <div className="flex gap-4">
+              {Array.from({length: 10}).map((_, i) => (
+                <div key={i} className="w-1 h-4 bg-black"></div>
+              ))}
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

@@ -1,35 +1,45 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Layers, Box, Grid3x3 } from 'lucide-react'
-
 export default function Design14() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">CardFlow14</h1>
+    <div className="min-h-screen bg-white p-8">
+      <header className="border-b-4 border-double border-black pb-4 mb-8">
+        <div className="text-center">
+          <div className="text-6xl font-serif">The Digital Times</div>
+          <div className="flex justify-center gap-8 text-xs mt-2">
+            <span>VOL. XCII</span>
+            <span>•</span>
+            <span>NO. 31,415</span>
+            <span>•</span>
+            <span>MARCH 2024</span>
+            <span>•</span>
+            <span>$2.50</span>
+          </div>
+        </div>
       </header>
-      <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          { icon: Layers, title: 'Stack', color: 'bg-purple-500' },
-          { icon: Box, title: 'Build', color: 'bg-blue-500' },
-          { icon: Grid3x3, title: 'Scale', color: 'bg-green-500' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition"
-          >
-            <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4`}>
-              <item.icon className="w-8 h-8 text-white" />
+      <main className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-6 gap-4">
+          <div className="col-span-4">
+            <h1 className="text-5xl font-serif mb-4 leading-tight">
+              Revolutionary Web Design Transforms Digital Landscape
+            </h1>
+            <div className="columns-2 gap-6 text-sm">
+              <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p className="mb-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
             </div>
-            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">
-              Professional solutions for modern challenges
-            </p>
-          </motion.div>
-        ))}
+          </div>
+          <div className="col-span-2 border-l pl-4">
+            <h3 className="font-serif text-2xl mb-4">In This Issue</h3>
+            <div className="space-y-2 text-sm">
+              <div className="pb-2 border-b">Tech News - Page 3</div>
+              <div className="pb-2 border-b">Design Trends - Page 7</div>
+              <div className="pb-2 border-b">Opinion - Page 12</div>
+              <div className="pb-2 border-b">Markets - Page 15</div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   )

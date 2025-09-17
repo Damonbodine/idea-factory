@@ -1,36 +1,29 @@
 'use client'
-import { motion } from 'framer-motion'
-import { Layers, Box, Grid3x3 } from 'lucide-react'
-
 export default function Design39() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold">CardFlow39</h1>
-      </header>
-      <main className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-          { icon: Layers, title: 'Stack', color: 'bg-purple-500' },
-          { icon: Box, title: 'Build', color: 'bg-blue-500' },
-          { icon: Grid3x3, title: 'Scale', color: 'bg-green-500' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition"
-          >
-            <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4`}>
-              <item.icon className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">
-              Professional solutions for modern challenges
+    <div className="min-h-screen bg-black text-white">
+      <div className="container mx-auto px-8 py-16">
+        <header className="text-center mb-20">
+          <div className="text-xs tracking-[0.5em] mb-4">ESTABLISHED 2025</div>
+          <div className="text-6xl font-thin tracking-[0.3em]">LUXE</div>
+          <div className="text-xs tracking-[0.5em] mt-4">DESIGN XXXIX</div>
+        </header>
+        <main>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-2xl font-light leading-relaxed mb-12">
+              Exquisite craftsmanship meets digital excellence
             </p>
-          </motion.div>
-        ))}
-      </main>
+            <div className="grid grid-cols-3 gap-px bg-white/10">
+              {Array.from({length: 9}).map((_, i) => (
+                <div key={i} className="aspect-square bg-black"></div>
+              ))}
+            </div>
+            <button className="mt-12 border border-white px-12 py-4 tracking-widest hover:bg-white hover:text-black transition-all">
+              DISCOVER
+            </button>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }
