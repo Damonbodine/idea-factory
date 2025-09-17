@@ -1,61 +1,52 @@
 'use client'
-
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Zap, Star } from 'lucide-react'
 
 export default function Design11() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-600 text-white">
-      <nav className="px-8 py-6">
-        <div className="flex justify-between items-center">
-          <div className="text-3xl font-black">AGENCY</div>
-          <div className="hidden md:flex gap-8">
-            <a href="#" className="hover:text-purple-200 transition">Services</a>
-            <a href="#" className="hover:text-purple-200 transition">Work</a>
-            <a href="#" className="hover:text-purple-200 transition">About</a>
-            <a href="#" className="hover:text-purple-200 transition">Contact</a>
+    <div className="min-h-screen bg-orange-50 overflow-hidden">
+      <svg className="absolute top-0 left-0" width="100%" height="100%">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="orange" opacity="0.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dots)" />
+      </svg>
+      <div className="absolute top-20 -right-20 w-96 h-96 bg-orange-300 rounded-full blur-3xl opacity-30" />
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-pink-300 rounded-full blur-3xl opacity-30" />
+      <div className="relative z-10">
+        <nav className="p-8 flex justify-between items-center">
+          <div className="text-2xl font-bold text-orange-900">Organic</div>
+          <div className="flex gap-6">
+            <a href="#" className="text-orange-700 hover:text-orange-900">About</a>
+            <a href="#" className="text-orange-700 hover:text-orange-900">Work</a>
+            <a href="#" className="text-orange-700 hover:text-orange-900">Contact</a>
           </div>
-        </div>
-      </nav>
-
-      <main className="container mx-auto px-8 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl"
-        >
-          <h1 className="text-7xl font-black mb-6 leading-tight">
-            WE BUILD<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
-              BOLD IDEAS
-            </span>
-          </h1>
-          <p className="text-xl mb-8 text-white/90">
-            Transform your vision into reality with cutting-edge solutions
-          </p>
-          <button className="px-8 py-4 bg-white text-purple-600 font-bold rounded-full flex items-center gap-3 hover:scale-105 transition">
-            Get Started <ArrowRight />
-          </button>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <div className="bg-white/10 backdrop-blur p-8 rounded-2xl">
-            <Zap className="w-12 h-12 mb-4 text-purple-300" />
-            <h3 className="text-2xl font-bold mb-2">Fast Delivery</h3>
-            <p className="text-white/80">Lightning-fast development cycles</p>
+        </nav>
+        <main className="px-8 py-20">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h1 className="text-6xl font-bold text-orange-900 mb-6">
+              Fluid Design<br />
+              Natural Flow
+            </h1>
+            <p className="text-xl text-orange-700 mb-8 max-w-2xl">
+              We create interfaces that feel alive, organic, and human
+            </p>
+            <button className="px-8 py-4 bg-orange-400 text-white rounded-full hover:bg-orange-500 transition">
+              Explore Nature
+            </button>
+          </motion.div>
+          <div className="mt-20 flex justify-center gap-8">
+            <div className="w-32 h-32 bg-orange-200 rounded-full" />
+            <div className="w-24 h-24 bg-pink-200 rounded-full mt-8" />
+            <div className="w-40 h-40 bg-orange-300 rounded-full -mt-4" />
           </div>
-          <div className="bg-white/10 backdrop-blur p-8 rounded-2xl">
-            <Sparkles className="w-12 h-12 mb-4 text-purple-300" />
-            <h3 className="text-2xl font-bold mb-2">Creative Solutions</h3>
-            <p className="text-white/80">Innovative approaches to every challenge</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur p-8 rounded-2xl">
-            <Star className="w-12 h-12 mb-4 text-purple-300" />
-            <h3 className="text-2xl font-bold mb-2">Premium Quality</h3>
-            <p className="text-white/80">Excellence in every line of code</p>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   )
 }
