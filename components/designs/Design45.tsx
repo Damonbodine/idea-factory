@@ -19,7 +19,7 @@ export default function Design45() {
             </div>
             <div className="border-4 border-amber-900 p-8">
               <p className="text-center text-xl text-amber-900">
-                "Timeless designs for the modern age"
+                &ldquo;Timeless designs for the modern age&rdquo;
               </p>
             </div>
             <div className="flex justify-center gap-8 mt-12">
